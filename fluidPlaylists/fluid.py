@@ -1,11 +1,10 @@
 import matplotlib
-matplotlib.use('Agg')
-import spotify_helper
-import plot
+from . import spotify_helper
+from . import plot
 import math
 import os
 import errno
-import config
+import importlib
 
 class FluidPlaylist():
     """
@@ -39,6 +38,16 @@ class FluidPlaylist():
         Sets the class spotify access token prompting the user in the terminal.
         """
         self.spotify_token = self.spotify.get_spotify_access_token()
+
+    def set_spotify_access_token_from_access_code(self, access_code):
+        """
+        Sets the class spotify access token from a access code.
+
+        Args:
+        access_code (str): Spotify access token.
+        """
+        access_token = self.spotify.get_spotify_access_token_from_access_code(access_code)
+        self.spotify_token = access_token
 
     def get_spotify_authorize_url(self):
         """
@@ -238,5 +247,6 @@ class FluidPlaylist():
 
 
 if __name__ == "__main__":
+    config = importlib.import_module('fluidPlaylist.config', package=None)
     APP = FluidPlaylist(config.SPOTIFY['client_id'], config.SPOTIFY['client_secret'], config.FLUIDCONFIG['details_threshold'], config.FLUIDCONFIG['playlist_name'], config.FLUIDCONFIG['callback_url'])
     APP.run_main_flow()

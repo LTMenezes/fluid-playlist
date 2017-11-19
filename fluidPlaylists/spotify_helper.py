@@ -59,6 +59,21 @@ class Spotify(object):
         print('This is your access token: ' + str(token['access_token']))
         return token['access_token']
 
+    def get_spotify_access_token_from_access_code(self, access_code):
+        """
+        Gets user access token from a given access code.
+
+        Args:
+        access_code (str): Spotify access code.
+
+        Returns:
+        string: User access token.
+        """
+        sp_credentials = oauth2.SpotifyOAuth(self.client_id, self.client_secret, self.callback_url, scope='user-library-read playlist-read-private playlist-modify-private')
+
+        token = sp_credentials.get_access_token(access_code)
+        return token['access_token']
+
     def get_authorize_url(self):
         """
         Returns a valid authorize url for user authentification.
