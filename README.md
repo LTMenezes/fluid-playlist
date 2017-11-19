@@ -1,4 +1,4 @@
-# Fluid Playlist
+# Fluid Playlists
 
 [![PyPI version](https://badge.fury.io/py/fluidPlaylists.svg)](https://badge.fury.io/py/fluidPlaylists)
 
