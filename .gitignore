@@ -102,8 +102,6 @@ venv.bak/
 
 # mypy
 .mypy_cache/
-*.png
-*.jpg
 
 /.venv
 *.pyc
