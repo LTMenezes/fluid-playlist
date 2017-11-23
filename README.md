@@ -1,19 +1,19 @@
-Fluid Playlists
+Fluid Playlist
 ===================
 
-[![PyPI version](https://badge.fury.io/py/fluidPlaylists.svg)](https://badge.fury.io/py/fluidPlaylists)
+[![PyPI version](https://badge.fury.io/py/fluidPlaylists.svg)](https://badge.fury.io/py/fluidplaylist)
 
-Fluid Playlists is a library to build fluid playlists in Spotify, a playlist that changes gradually the musics rhythm and energy. The goal is to provide the user with a playlist that is built without abrupt changes. Playlists can be built using the user saved songs and featured tracks from around the world.
+Fluid Playlist is a library to build fluid playlists in Spotify, a playlist that changes gradually the musics rhythm and energy. The goal is to provide the user with a playlist that is built without abrupt changes. Playlists can be built using the user saved songs and featured tracks from around the world. You can checkout the [demo](https://fluid-playlists.herokuapp.com/) here.
 
 ![Fluid](docs/fluid-screen.png)
 
-Installing Fluid Playlists
+Installing Fluid Playlist
 ===================
 
-You can install Fluid Playlists with:
+You can install Fluid Playlist with:
 
 ```bash
-pip install fluidPlaylists
+pip install fluidplaylist
 ```
 
 We recommend using a [virtual environment](http://docs.python-guide.org/en/latest/dev/virtualenvs/).
@@ -23,7 +23,7 @@ Getting Started
 ===================
 Building a simple fluid playlist should be as simple as:
 ```py
-from fluidPlaylists import fluid
+from fluidplaylist import fluid
 
 fluid_p = fluid.FluidPlaylist('YOUR_CLIENT_ID', 'YOUR_CLIENT_SECRET', 0.1, "Your Fluid Playlist", "http://localhost:8000")
 
@@ -40,7 +40,7 @@ Issue tracker
 ===================
 Please report any bugs and enhancement ideas in the issue tracker:
 
-  https://github.com/LTMenezes/fluid-playlists/issues
+  https://github.com/LTMenezes/fluid-playlist/issues
 
 Feel free to also ask questions on the tracker.
 
