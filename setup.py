@@ -1,6 +1,6 @@
 from distutils.core import setup
 setup(
-  name = 'fluidplaylist',
+  name = 'fluid-test-playlist',
   packages = ['fluidplaylist'],
   version = '0.1.4',
   description = 'A library to build fluid playlists in Spotify.',
